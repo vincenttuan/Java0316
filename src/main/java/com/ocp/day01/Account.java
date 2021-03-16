@@ -1,7 +1,13 @@
 package com.ocp.day01;
 
 public class Account {
-    int balance; // 帳戶餘額
+    private int balance; // 帳戶餘額
+    
+    // 自行撰寫一個查帳戶餘額的方法
+    int getBalance() {
+        return balance; // 方法停止並回傳餘額
+    }
+    
     void withdraw(int money) { // 提款方法
         // 驗證 money 是否符合存款的條件
         if(money <= 0) {
