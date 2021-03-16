@@ -25,5 +25,7 @@ public class Bank {
         System.out.printf("a03 帳戶餘額: $%,d\n", a03.balance);
         // 提款
         System.out.println("a03 提款 5000 元後...");
+        a03.withdraw(5000);
+        System.out.printf("a03 帳戶餘額: $%,d\n", a03.balance);
     }
 }
