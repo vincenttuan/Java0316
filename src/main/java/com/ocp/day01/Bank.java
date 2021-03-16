@@ -5,6 +5,10 @@ public class Bank {
         Account a01 = new Account(); // 建立 a01 帳戶
         Account a02 = new Account(); // 建立 a02 帳戶
         Account a03 = new Account(); // 建立 a03 帳戶
+        // 各帳戶第一次的存款
+        a01.deposit(1000);
+        a02.deposit(2000);
+        a03.deposit(3000);
         
         System.out.printf("a01 帳戶餘額: $%,d\n", a01.getBalance());
         System.out.printf("a02 帳戶餘額: $%,d\n", a02.getBalance());
