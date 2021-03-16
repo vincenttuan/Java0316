@@ -11,6 +11,13 @@ public class Bank {
         System.out.printf("a01 帳戶餘額: $%,d\n", a01.balance);
         System.out.printf("a02 帳戶餘額: $%,d\n", a02.balance);
         System.out.printf("a03 帳戶餘額: $%,d\n", a03.balance);
-        
+        // 存款
+        System.out.println("a01 存款 500 元後...");
+        a01.deposit(500);
+        System.out.printf("a01 帳戶餘額: $%,d\n", a01.balance);
+        // 提款
+        System.out.println("a02 提款 800 元後...");
+        a02.withdraw(800);
+        System.out.printf("a02 帳戶餘額: $%,d\n", a02.balance);
     }
 }
