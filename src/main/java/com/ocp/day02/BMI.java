@@ -2,10 +2,22 @@ package com.ocp.day02;
 
 // 設計計算BMI應該要有的資源與方法
 public class BMI {
+    // 屬性定義區
     String name; // 姓名
     double height; // 身高
     double weight; // 體重
     
+    // 建構子設計區
+    BMI() {
+    }
+
+    BMI(String n, double h, double w) {
+        name = n;
+        height = h;
+        weight = w;
+    }
+    
+    // 方法實作區
     // 取得計算後的BMI資料
     double getBMIValue() { 
         double bmiValue = weight / Math.pow(height/100, 2); // 計算
