@@ -1,0 +1,21 @@
+package com.ocp.day02;
+
+// 設計計算BMI應該要有的資源與方法
+public class BMI {
+    String name; // 姓名
+    double height; // 身高
+    double weight; // 體重
+    
+    // 取得計算後的BMI資料
+    double getBMIValue() { 
+        double bmiValue = weight / Math.pow(height/100, 2); // 計算
+        return bmiValue; // 回傳 bmiValue (要回傳與方法簽章一樣的型別也就是double值)
+    }
+    
+    // 取得BMI的分析結果
+    String getResultValue() {
+        double bmiValue = getBMIValue(); // 直接取得 bmi value 的計算結果
+        String resultValue = (bmiValue > 23) ? "過重" : (bmiValue < 18) ? "過輕" : "正常";
+        return resultValue;
+    }
+}
