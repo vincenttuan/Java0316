@@ -4,6 +4,14 @@ public class Exam {
     String name;
     int chinese;
     int math;
+    
+    // 設計建構子
+    public Exam(String name, int chinese, int math) {
+        this.name = name;
+        this.chinese = chinese;
+        this.math = math;
+    }
+    
     int getSum() {
         return chinese + math;
     }
