@@ -19,7 +19,7 @@ public class Exam {
         return getSum() / 2.0;
     }
     String getPrintData() {
-        return String.format("姓名:%s 國文:%d 數學:%d 總分:%d 平均:%.1f\n", 
+        return String.format("姓名:%s 國文:%d 數學:%d 總分:%d 平均:%.1f", 
                 name, chinese, math, getSum(), getAvg());
     }
 }
