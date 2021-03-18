@@ -7,5 +7,9 @@ public class StudentCase {
         // 學生加入考試成績物件
         s1.exam = new Exam(s1.name, 100, 90);
         s1.print();
+        // 請單獨印出 bmiValue 資料
+        System.out.println(s1.bmi.getBMIValue());
+        // 請單獨印出 平均分數 資料
+        System.out.println(s1.exam.getAvg());
     }
 }
