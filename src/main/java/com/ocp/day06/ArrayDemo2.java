@@ -15,5 +15,12 @@ public class ArrayDemo2 {
         double avg = (double)sum/scores.length;
         System.out.printf("總分: %d 平均: %.1f\n", sum, avg);
         // 求最高分?
+        int max = 0;
+        for(int i=0;i<scores.length;i++) {
+            if(scores[i] > max) {
+                max = scores[i];
+            }
+        }
+        System.out.printf("最高分: %d\n", max);
     }
 }
