@@ -22,5 +22,13 @@ public class ArrayDemo2 {
             }
         }
         System.out.printf("最高分: %d\n", max);
+        // 最低分
+        int min = max;
+        for(int i=0;i<scores.length;i++) {
+            if(scores[i] < min) {
+                min = scores[i];
+            }
+        }
+        System.out.printf("最低分: %d\n", min);
     }
 }
