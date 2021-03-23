@@ -7,6 +7,7 @@ public class John {
     private int d = 400;
     
     public void print() {
+        System.out.print("John: ");
         System.out.print(a + ", ");
         System.out.print(b + ", ");
         System.out.print(c + ", ");
