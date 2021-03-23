@@ -1,5 +1,5 @@
 package com.ocp.day04;
-import com.ocp.day04.bar.Money;
+import com.ocp.day04.bar.Money; 
 //import com.ocp.day04.foo.Money;
 public class AccessMoney {
     public static void main(String[] args) {
