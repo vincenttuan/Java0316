@@ -1,5 +1,7 @@
 package com.ocp.day06;
 
+import java.util.Arrays;
+
 public class ArrayBMICV {
 
     public static void main(String[] args) {
@@ -25,6 +27,8 @@ public class ArrayBMICV {
         for(int i=0;i<persons.length;i++) {
             bmis[i] = persons[i].bmi;
         }
+        // 印出 bmis 的資料
+        System.out.println(Arrays.toString(bmis));
         // 計算 bmi_cv
         double bmi_cv = MyMath.cv(bmis);
         System.out.printf("BMI C.V: %.2f%%\n", bmi_cv*100);
