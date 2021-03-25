@@ -6,5 +6,6 @@ public class ArrayCV2 {
         System.out.println(MyMath.sum(nums));
         System.out.println(MyMath.avg(nums));
         System.out.println(MyMath.sd(nums));
+        System.out.println(MyMath.cv(nums));
     }
 }

@@ -26,4 +26,12 @@ public class MyMath {
         double sd = Math.sqrt((1.0/n)*sumOfSquares);
         return sd;
     }
+    
+    public static double cv(double[] nums) {
+        double avg = avg(nums);
+        double sd = sd(nums);
+        double cv = sd / avg;
+        return cv;
+    }
+    
 }
