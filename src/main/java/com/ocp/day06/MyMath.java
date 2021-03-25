@@ -15,4 +15,15 @@ public class MyMath {
         double avg = sum / n;
         return avg;
     }
+
+    public static double sd(double[] nums) {
+        double avg = avg(nums);
+        double sumOfSquares = 0;
+        for(double n : nums) {
+            sumOfSquares += Math.pow(n-avg, 2);
+        }
+        int n = nums.length;
+        double sd = Math.sqrt((1.0/n)*sumOfSquares);
+        return sd;
+    }
 }

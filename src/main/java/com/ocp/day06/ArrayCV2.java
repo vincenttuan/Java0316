@@ -5,5 +5,6 @@ public class ArrayCV2 {
         double[] nums = {10, 20, 30};
         System.out.println(MyMath.sum(nums));
         System.out.println(MyMath.avg(nums));
+        System.out.println(MyMath.sd(nums));
     }
 }
