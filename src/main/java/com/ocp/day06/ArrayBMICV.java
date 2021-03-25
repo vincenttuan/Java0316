@@ -20,6 +20,13 @@ public class ArrayBMICV {
         for(Person p : persons) {
             System.out.printf("bmi: %.1f\n", p.bmi);
         }
-
+        // 建立一個 double[] bmis 用來存放所有 bmi 的資料
+        double[] bmis = new double[5];
+        for(int i=0;i<persons.length;i++) {
+            bmis[i] = persons[i].bmi;
+        }
+        // 計算 bmi_cv
+        double bmi_cv = MyMath.cv(bmis);
+        System.out.printf("BMI C.V: %.2f%%\n", bmi_cv*100);
     }
 }
