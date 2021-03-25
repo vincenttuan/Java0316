@@ -18,7 +18,7 @@ public class ArrayBMICV {
             // 將資料 persons[i] 印出
             System.out.println(persons[i]);
         }
-        // 印出 bmi 值
+        // 印出 bmi 值 (使用 for-each)
         for(Person p : persons) {
             System.out.printf("bmi: %.1f\n", p.bmi);
         }
