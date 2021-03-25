@@ -17,6 +17,7 @@ public class ArrayCV4 {
         double stocks_cv = MyMath.cv(stocks);
         double bonds_cv = MyMath.cv(bonds);
         String result = stocks_cv < bonds_cv ? "股票" : "公債";
-        
+        System.out.printf("股票獲利cv: %.2f%% 債券獲利cv: %.2f%% %s獲利較穩健\n", stocks_cv*100, bonds_cv*100, result);
+        System.out.printf("股票最大獲利: %.1f 股票最小獲利: %.1f\n", MyMath.max(stocks), MyMath.min(stocks));
     }
 }

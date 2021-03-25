@@ -38,4 +38,26 @@ public class MyMath {
         return cv;
     }
     
+    // 求最大值
+    public static double max(double[] nums) {
+        double max = nums[0];
+        for(double n : nums) {
+            if(n > max) {
+                max = n;
+            }
+        }
+        return max;
+    }
+    
+    // 求最小值
+    public static double min(double[] nums) {
+        double min = nums[0];
+        for(double n : nums) {
+            if(n < min) {
+                min = n;
+            }
+        }
+        return min;
+    }
+    
 }
