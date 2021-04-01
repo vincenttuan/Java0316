@@ -15,5 +15,11 @@ public class MultiArrayDemo1 {
                 System.out.println(m[i][k]);
             }
         }
+        // 改良
+        for(int i=0;i<m.length;i++) {
+            for(int k=0;k<m[i].length;k++) {
+                System.out.println(m[i][k]);
+            }
+        }
     }
 }
