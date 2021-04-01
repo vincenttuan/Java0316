@@ -16,11 +16,10 @@ public class XOGame2 {
             // pc
             while (true) {                
                 int m = new Random().nextInt(9); // 0~8
-                if(xo[m/3][m%3] != ' ') {
-                    continue;
+                if(xo[m/3][m%3] == '\u0000') {
+                    xo[m/3][m%3] = 'X';
+                    break;
                 }
-                xo[m/3][m%3] = 'X';
-                break;
             }
             
         } while (true);
