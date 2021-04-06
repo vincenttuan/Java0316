@@ -10,6 +10,6 @@ public class Java8Study7 {
                     .flatMap(s -> Stream.of(s)) // String[] 轉 Stream
                     .mapToInt(s -> s.length())
                     .sum();
-        
+        System.out.println(sum);
     }
 }
