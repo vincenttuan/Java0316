@@ -11,6 +11,7 @@ public class WrapperDemo2 {
         Integer a2 = 100; // 相當於編譯器幫你產生 new Integer(100) *auto-boxing (自動裝箱)
         Integer b2 = 200;
         System.out.println(a2 + b2); // 相當於編譯器幫你調用 intValue() 方法 *auto-unboxing (自動拆箱)
-        
+        int c = new Integer(100);
+        System.out.println(c);
     }
 }
