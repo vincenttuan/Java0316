@@ -1,5 +1,7 @@
 package com.lab;
 
+import java.util.stream.IntStream;
+
 public class Java8Study {
     public static void main(String[] args) {
         int[] scores = {80, 50, 70, 90, 40};
@@ -11,7 +13,9 @@ public class Java8Study {
         for(int s : scores) {
             System.out.println(s);
         }
-        
+        // java 8 (利用 Stream.of() 來進行資料分析)
+        IntStream.of(scores).forEach(s -> System.out.println(s));
+        IntStream.of(scores).forEach(System.out::println);
         
     }
 }
