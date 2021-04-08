@@ -2,18 +2,29 @@ package com.ocp.day10;
 
 public class Person {
     // 物件屬性
+    private String name;
     private int age;
     private double height;
     private double weight;
+    
     // 建構子
     public Person() {
     }
-    public Person(int age, double height, double weight) {
+    public Person(String name, int age, double height, double weight) {
+        this.name = name;
         this.age = age;
         this.height = height;
         this.weight = weight;
     }
+
     // 物件方法(封裝)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getAge() {
         return age;
@@ -38,7 +49,7 @@ public class Person {
     public void setWeight(double weight) {
         this.weight = weight;
     }
-    
+
     
     
     
