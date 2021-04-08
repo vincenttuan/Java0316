@@ -22,7 +22,7 @@ public class PersonMain4 {
                 .flatMap(p -> Stream.of(p))
                 .mapToDouble(getBMI::apply)
                 .forEach(System.out::println); // value -> System.out.println(value)
-                
+        // 請問哪一個人 bmi 最大 ?
         
     }
 }
