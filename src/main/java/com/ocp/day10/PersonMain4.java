@@ -1,5 +1,6 @@
 package com.ocp.day10;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -26,6 +27,19 @@ public class PersonMain4 {
                 .mapToDouble(getBMI::apply)
                 .forEach(System.out::println); // value -> System.out.println(value)
         // 請問哪一個人 bmi 最大 ?
+        double maxBmi = Stream.of(persons)
+                            .flatMap(p -> Stream.of(p))
+                            .mapToDouble(getBMI::apply)
+                            .summaryStatistics()
+                            .getMax();
         
+        Consumer<Person> printPerson = p -> {
+            System.out.printf("%s %d %.1fcm %.1fkg bmi: %.2f\n",
+                        p.getName(), p.getAge(), p.getHeight(), p.getWeight(), getBMI.apply(p));
+        }; 
+        Stream.of(persons)
+                .flatMap(p -> Stream.of(p))
+                .filter(p -> getBMI.apply(p) == maxBmi)
+                .forEach(printPerson);
     }
 }
