@@ -49,5 +49,8 @@ public class PersonMain {
                     }
                     return false;
                 };
+        Stream.of(persons)
+                .filter(normalBmi)
+                .forEach(p -> System.out.println(p.getName()));
     }
 }
