@@ -17,7 +17,10 @@ public class PersonMain4 {
             },
         };
         // 請印出所有人的 bmi 資料
-        Function<Person, Double> getBMI = p -> p.getWeight() / Math.pow(p.getHeight()/100, 2);
+        Function<Person, Double> getBMI = p -> {
+            double bmi = p.getWeight() / Math.pow(p.getHeight()/100, 2);
+            return Math.round(bmi * 100) / 100.0;
+        };
         Stream.of(persons)
                 .flatMap(p -> Stream.of(p))
                 .mapToDouble(getBMI::apply)
