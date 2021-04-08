@@ -1,5 +1,8 @@
 package com.ocp.day10;
 
+import java.util.function.Function;
+import java.util.stream.Stream;
+
 public class PersonMain4 {
     public static void main(String[] args) {
         Person[][] persons = {
@@ -14,6 +17,12 @@ public class PersonMain4 {
             },
         };
         // 請印出所有人的 bmi 資料
+        Function<Person, Double> getBMI = p -> p.getWeight() / Math.pow(p.getHeight()/100, 2);
+        Stream.of(persons)
+                .flatMap(p -> Stream.of(p))
+                .mapToDouble(getBMI::apply)
+                .forEach(System.out::println); // value -> System.out.println(value)
+                
         
     }
 }
