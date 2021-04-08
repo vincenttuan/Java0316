@@ -1,5 +1,6 @@
 package com.ocp.day10;
 
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class PersonMain {
@@ -15,7 +16,7 @@ public class PersonMain {
         Stream.of(persons)
                 .filter(p -> p.getAge() < 18)
                 .forEach(p -> System.out.println(p.getName()));
-        // 請印出BMI合格正常的人名(18<bmi<=23)
+        // 請印出BMI合格正常的人名(18<bmi<=23) Part I
         Stream.of(persons)
                 .filter(p -> {
                     double bmi = p.getWeight()/Math.pow(p.getHeight()/100, 2);
@@ -25,5 +26,28 @@ public class PersonMain {
                     return false;
                 })
                 .forEach(p -> System.out.println(p.getName()));
+        // 請印出BMI合格正常的人名(18<bmi<=23) Part II
+        // BMI合格正常的過濾邏輯(filter)先拆出來
+        Predicate<Person> normalBmi = p -> {
+                    double bmi = p.getWeight()/Math.pow(p.getHeight()/100, 2);
+                    if(bmi > 18 && bmi <= 23) {
+                        return true;
+                    }
+                    return false;
+                };
+        Predicate<Person> thinBmi = p -> {
+                    double bmi = p.getWeight()/Math.pow(p.getHeight()/100, 2);
+                    if(bmi <= 18) {
+                        return true;
+                    }
+                    return false;
+                };
+        Predicate<Person> fatBmi = p -> {
+                    double bmi = p.getWeight()/Math.pow(p.getHeight()/100, 2);
+                    if(bmi > 23) {
+                        return true;
+                    }
+                    return false;
+                };
     }
 }
