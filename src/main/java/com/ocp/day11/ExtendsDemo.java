@@ -28,5 +28,16 @@ public class ExtendsDemo {
         System.out.println(m1);
         System.out.println(m2);
         System.out.println(d1);
+        //---------------------------------
+        // 請問總薪資(salary)是多少 ?
+        System.out.println("請問總薪資(salary)是多少 ?");
+        Employee[] employees = {e1, e2, e3, m1, m2, d1};
+        // Java 7 (for-loop)
+        int sum = 0;
+        for(int i=0;i<employees.length;i++) {
+            //System.out.println(employees[i]);
+            sum += employees[i].getSalary();
+        }
+        System.out.printf("總薪資: %,d\n", sum);
     }
 }
