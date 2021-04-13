@@ -10,5 +10,10 @@ public class Manager extends Employee {
     public void setBudget(int budget) {
         this.budget = budget;
     }
+
+    @Override
+    public String toString() {
+        return "Manager{" + "budget=" + budget + '}';
+    }
     
 }

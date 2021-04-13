@@ -10,4 +10,10 @@ public class Director extends Manager {
     public void setStockOption(int stockOption) {
         this.stockOption = stockOption;
     }
+
+    @Override
+    public String toString() {
+        return "Director{" + "stockOption=" + stockOption + '}';
+    }
+    
 }

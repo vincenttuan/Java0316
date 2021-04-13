@@ -21,6 +21,9 @@ public class ExtendsDemo {
         d1.setSalary(20_0000);
         d1.setBudget(50_0000);
         d1.setStockOption(300_0000);
-        
+        //---------------------------------
+        System.out.println(e1);
+        System.out.println(e2);
+        System.out.println(e3);
     }
 }
