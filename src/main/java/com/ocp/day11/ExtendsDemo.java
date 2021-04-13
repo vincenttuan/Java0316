@@ -75,5 +75,8 @@ public class ExtendsDemo {
                     .mapToInt(Employee::getSalary)
                     .sum();
         System.out.printf("Manager 總薪資: %,d\n", sum6);
+        // 請問 Manager 的總薪資(salary)是多少 Part II ?
+        System.out.println("請問 Manager 總薪資(salary)是多少 Part II ?");
+        
     }
 }
