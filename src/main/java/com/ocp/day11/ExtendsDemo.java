@@ -1,5 +1,7 @@
 package com.ocp.day11;
 
+import java.util.stream.Stream;
+
 public class ExtendsDemo {
     public static void main(String[] args) {
         // 操作 Employee, Manager, Director
@@ -46,5 +48,9 @@ public class ExtendsDemo {
             sum2 += e.getSalary();
         }
         System.out.printf("總薪資: %,d\n", sum2);
+        // Java 8
+        int sum3 = Stream.of(employees).mapToInt(e -> e.getSalary()).sum();
+        System.out.printf("總薪資: %,d\n", sum3);
+                
     }
 }
