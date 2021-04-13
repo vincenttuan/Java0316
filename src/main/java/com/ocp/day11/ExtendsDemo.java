@@ -51,6 +51,8 @@ public class ExtendsDemo {
         // Java 8
         int sum3 = Stream.of(employees).mapToInt(e -> e.getSalary()).sum();
         System.out.printf("總薪資: %,d\n", sum3);
-                
+        // Java 8 (使用方法參考 ::)
+        int sum4 = Stream.of(employees).mapToInt(Employee::getSalary).sum();
+        System.out.printf("總薪資: %,d\n", sum4);        
     }
 }
