@@ -53,6 +53,12 @@ public class ExtendsDemo {
         System.out.printf("總薪資: %,d\n", sum3);
         // Java 8 (使用方法參考 ::)
         int sum4 = Stream.of(employees).mapToInt(Employee::getSalary).sum();
-        System.out.printf("總薪資: %,d\n", sum4);        
+        System.out.printf("總薪資: %,d\n", sum4);
+        // 請問 Manager 的總薪資(salary)是多少 ?
+        System.out.println("請問 Manager 總薪資(salary)是多少 ?");
+        // Java 7
+        for(Employee e : employees) {
+            System.out.println(e.getClass().getSimpleName());
+        }
     }
 }
