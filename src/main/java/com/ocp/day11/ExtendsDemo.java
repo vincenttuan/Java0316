@@ -3,6 +3,7 @@ package com.ocp.day11;
 import java.util.stream.Stream;
 
 public class ExtendsDemo {
+
     public static void main(String[] args) {
         // 操作 Employee, Manager, Director
         Employee e1 = new Employee();
@@ -36,14 +37,14 @@ public class ExtendsDemo {
         Employee[] employees = {e1, e2, e3, m1, m2, d1};
         // Java 7 (for-loop)
         int sum = 0;
-        for(int i=0;i<employees.length;i++) {
+        for (int i = 0; i < employees.length; i++) {
             //System.out.println(employees[i]);
             sum += employees[i].getSalary();
         }
         System.out.printf("總薪資: %,d\n", sum);
         // Java 7 (for-each)
         int sum2 = 0;
-        for(Employee e : employees) {
+        for (Employee e : employees) {
             //System.out.println(e);
             sum2 += e.getSalary();
         }
@@ -58,25 +59,34 @@ public class ExtendsDemo {
         System.out.println("請問 Manager 總薪資(salary)是多少 ?");
         // Java 7
         int sum5 = 0;
-        for(Employee e : employees) {
+        for (Employee e : employees) {
             //System.out.println(e.getClass().getSimpleName());
-            if(e.getClass().getSimpleName().equals("Manager")) {
+            if (e.getClass().getSimpleName().equals("Manager")) {
                 sum5 += e.getSalary();
             }
-            if(e.getClass().getSimpleName().equals("Director")) {
+            if (e.getClass().getSimpleName().equals("Director")) {
                 sum5 += e.getSalary();
             }
         }
         System.out.printf("Manager 總薪資: %,d\n", sum5);
         // Java 8
         int sum6 = Stream.of(employees)
-                    .filter(e -> e.getClass().getSimpleName().equals("Manager") ||
-                                 e.getClass().getSimpleName().equals("Director"))
-                    .mapToInt(Employee::getSalary)
-                    .sum();
+                .filter(e -> e.getClass().getSimpleName().equals("Manager")
+                || e.getClass().getSimpleName().equals("Director"))
+                .mapToInt(Employee::getSalary)
+                .sum();
         System.out.printf("Manager 總薪資: %,d\n", sum6);
         // 請問 Manager 的總薪資(salary)是多少 Part II ?
         System.out.println("請問 Manager 總薪資(salary)是多少 Part II ?");
-        
+        // 利用 instanceof 運算子
+        for (Employee e : employees) {
+            System.out.println(e instanceof Manager);
+        }
+        int sum7 = Stream.of(employees)
+                .filter(e -> e instanceof Manager)
+                .mapToInt(Employee::getSalary)
+                .sum();
+        System.out.printf("Manager 總薪資: %,d\n", sum7);
+
     }
 }
