@@ -39,5 +39,12 @@ public class ExtendsDemo {
             sum += employees[i].getSalary();
         }
         System.out.printf("總薪資: %,d\n", sum);
+        // Java 7 (for-each)
+        int sum2 = 0;
+        for(Employee e : employees) {
+            //System.out.println(e);
+            sum2 += e.getSalary();
+        }
+        System.out.printf("總薪資: %,d\n", sum2);
     }
 }
