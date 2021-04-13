@@ -54,7 +54,7 @@ public class EmployeeApi {
     }
     
     // 員工總數
-    public static int amount() {
+    public static int getAmount() {
         return employees.length;
     }
     
