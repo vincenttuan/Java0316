@@ -57,8 +57,16 @@ public class ExtendsDemo {
         // 請問 Manager 的總薪資(salary)是多少 ?
         System.out.println("請問 Manager 總薪資(salary)是多少 ?");
         // Java 7
+        int sum5 = 0;
         for(Employee e : employees) {
-            System.out.println(e.getClass().getSimpleName());
+            //System.out.println(e.getClass().getSimpleName());
+            if(e.getClass().getSimpleName().equals("Manager")) {
+                sum5 += e.getSalary();
+            }
+            if(e.getClass().getSimpleName().equals("Director")) {
+                sum5 += e.getSalary();
+            }
         }
+        System.out.printf("Manager 總薪資: %,d\n", sum5);
     }
 }
