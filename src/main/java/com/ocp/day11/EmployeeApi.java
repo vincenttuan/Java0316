@@ -23,6 +23,9 @@ public class EmployeeApi {
     }
     
     // 取得所有員工資料
+    public static Employee[] getEmployees() {
+        return employees;
+    }
     
     // 取得總薪資
     
@@ -31,5 +34,8 @@ public class EmployeeApi {
     // 取得總預算
     
     // 員工總數
+    public static int amount() {
+        return employees.length;
+    }
     
 }
