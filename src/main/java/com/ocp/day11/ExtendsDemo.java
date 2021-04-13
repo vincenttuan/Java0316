@@ -68,5 +68,7 @@ public class ExtendsDemo {
             }
         }
         System.out.printf("Manager 總薪資: %,d\n", sum5);
+        // Java 8
+        
     }
 }
