@@ -21,4 +21,15 @@ public class EmployeeApi {
         d1.setStockOption(300_0000);
         employees = new Employee[]{e1, e2, e3, m1, m2, d1};
     }
+    
+    // 取得所有員工資料
+    
+    // 取得總薪資
+    
+    // 取得平均薪資
+    
+    // 取得總預算
+    
+    // 員工總數
+    
 }
