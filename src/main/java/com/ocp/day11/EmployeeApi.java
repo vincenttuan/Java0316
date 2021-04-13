@@ -1,7 +1,7 @@
 package com.ocp.day11;
 
 public class EmployeeApi {
-    private static Employee[] employees = null;
+    private static Employee[] employees;
     static {
         Employee e1 = new Employee();
         e1.setSalary(3_0000);
