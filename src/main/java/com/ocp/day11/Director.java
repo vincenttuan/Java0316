@@ -13,7 +13,7 @@ public class Director extends Manager {
 
     @Override
     public String toString() {
-        return "Director{" + "stockOption=" + stockOption + "budget=" + getBudget() + ", salary=" + getSalary() +  '}';
+        return "Director{" + "stockOption=" + stockOption + ", budget=" + getBudget() + ", salary=" + getSalary() +  '}';
     }
     
 }
