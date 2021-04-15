@@ -6,6 +6,8 @@ public class Zoo2 {
         playShout(cat);
         Tiger tiger = new Tiger();
         playShout(tiger);
+        Cat cat2 = new Tiger();
+        playShout(cat2);
     }
     public static void playShout(Cat x) {
         x.shout();
