@@ -5,6 +5,7 @@ class Father {
         System.out.println("Father");
     }
     Father(int x) {
+        this();
         System.out.println("Father: " + x);
     }
 }
