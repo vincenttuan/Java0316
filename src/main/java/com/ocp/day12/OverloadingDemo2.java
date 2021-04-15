@@ -4,6 +4,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class OverloadingDemo2 {
+    
     public void calc(int... array) {
         System.out.println(IntStream.of(array).sum());
     }
