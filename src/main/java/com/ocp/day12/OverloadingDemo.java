@@ -2,6 +2,9 @@ package com.ocp.day12;
 
 // 超載/覆載
 public class OverloadingDemo {
+    public void calc(short x) {
+        System.out.println("short: " + x);
+    }
     public void calc(int x) {
         System.out.println("int: " + x);
     }
