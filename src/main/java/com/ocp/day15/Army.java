@@ -13,5 +13,8 @@ public class Army {
         
         Stream.of(cars).forEach(c -> c.move());
         Stream.of(weapons).forEach(w -> w.shoot());
+        
+        // 請問 fighter, tank, truck 總油耗 = ?
+        
     }
 }
