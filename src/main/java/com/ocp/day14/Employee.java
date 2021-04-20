@@ -9,7 +9,7 @@ public abstract class Employee {
     public Employee(int salary) {
         this.salary = salary;
     }
-    
+
     public int getSalary() {
         return salary;
     }
