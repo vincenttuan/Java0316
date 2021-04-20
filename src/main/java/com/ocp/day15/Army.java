@@ -16,6 +16,7 @@ public class Army {
         
         // 請問 fighter, tank, truck 總油耗 = ?
         Oil[] oils = {fighter, tank, truck};
+        //int sum = Stream.of(oils).mapToInt(o -> o.spend()).sum();
         int sum = Stream.of(oils).mapToInt(Oil::spend).sum();
         System.out.println(sum);
     }
