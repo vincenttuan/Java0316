@@ -1,6 +1,6 @@
 package com.ocp.day15;
 
-public class Tank extends Car implements Weapon {
+public class Tank extends Car implements Weapon, Oil {
 
     @Override
     public void move() {
@@ -11,5 +11,11 @@ public class Tank extends Car implements Weapon {
     public void shoot() {
         System.out.println("穿甲彈");
     }
+
+    @Override
+    public int spend() {
+        return 300;
+    }
+    
     
 }
