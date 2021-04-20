@@ -1,11 +1,6 @@
 package com.ocp.day13;
 
-public class Cat implements Animal {
-
-    @Override
-    public void eat() {
-        System.out.println("飼料");
-    }
+public class Cat extends Pet {
 
     @Override
     public void move() {
