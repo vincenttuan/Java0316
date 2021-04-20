@@ -15,6 +15,8 @@ public class Army {
         Stream.of(weapons).forEach(w -> w.shoot());
         
         // 請問 fighter, tank, truck 總油耗 = ?
-        
+        Oil[] oils = {fighter, tank, truck};
+        int sum = Stream.of(oils).mapToInt(Oil::spend).sum();
+        System.out.println(sum);
     }
 }
