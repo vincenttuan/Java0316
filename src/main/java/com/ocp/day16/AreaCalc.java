@@ -5,7 +5,7 @@ public class AreaCalc {
         double r = 15.0;
         CircleArea ca = new CicleAreaImpl();
         System.out.println(ca.getArea(r));
-        // 匿名內部類別
+        // 匿名內部類別 (圓面積)
         CircleArea ca2 = new CircleArea(){
             @Override
             public double getArea(double r) {
@@ -13,5 +13,6 @@ public class AreaCalc {
             }
         };
         System.out.println(ca2.getArea(r));
+        // 匿名內部類別 (圓體積)
     }
 }
