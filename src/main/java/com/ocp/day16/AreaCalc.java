@@ -17,7 +17,7 @@ public class AreaCalc {
         CircleArea ca3 = new CircleArea() {
             @Override
             public double getArea(double r) {
-                return 4 / 3 * Math.pow(r, 3) * Math.PI;
+                return 4.0 / 3 * Math.pow(r, 3) * Math.PI;
             }
         };
         System.out.println(ca3.getArea(r));
