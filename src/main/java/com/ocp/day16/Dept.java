@@ -10,7 +10,7 @@ public class Dept {
         public void job() {
             String name = "寫程式";
             System.out.printf("%s 在 %s 公司的 %s 部門下 %s\n",
-                    this.name, companyName, Dept.this.name, name
+                    this.name, Dept.companyName, Dept.this.name, name
             );
         }
     }
