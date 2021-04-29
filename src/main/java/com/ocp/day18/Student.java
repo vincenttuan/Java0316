@@ -2,13 +2,15 @@ package com.ocp.day18;
 
 public class Student extends Person {
     private int score;
+    private Teacher teacher;
 
     public Student() {
     }
 
-    public Student(int score, String name, int age) {
+    public Student(int score, Teacher teacher, String name, int age) {
         super(name, age);
         this.score = score;
+        this.teacher = teacher;
     }
 
     public int getScore() {
@@ -19,9 +21,19 @@ public class Student extends Person {
         this.score = score;
     }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
     @Override
     public String toString() {
-        return "Student{" + "score=" + score + '}';
+        return "Student{" + "score=" + score + ", teacher=" + teacher + '}';
     }
+    
+    
     
 }
