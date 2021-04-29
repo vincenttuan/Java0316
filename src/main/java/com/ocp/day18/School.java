@@ -16,7 +16,17 @@ public class School {
                 .summaryStatistics();
         System.out.println(state.getSum());
         System.out.println(state.getAverage());
-        // 請問老師薪資總和與平均 = ?
+        
+        // 印出不及格的學生,分數,老師與總平均
+        double avg = Arrays.stream(DataCenter.getPeople())
+                .filter(x -> x instanceof Student)
+                .map(x -> (Student)x)
+                .filter(x -> x.getScore() < 60)
+                .peek(x -> System.out.printf("學生:%s, 分數:%d, 老師:%s\n", x.getName(), x.getScore(), x.getTeacher().getName()))
+                .mapToInt(x -> x.getScore())
+                .average()
+                .getAsDouble();
+        System.out.println("不及格平均: " + avg);
         
     }
 }
