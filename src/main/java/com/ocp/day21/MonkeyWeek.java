@@ -4,6 +4,7 @@ public class MonkeyWeek {
     public static void main(String[] args) {
         work(2);
         work(Week.MON);
+        work(100); // 下錯參數
     }
     public static void work(int num) {
         switch(num) {
