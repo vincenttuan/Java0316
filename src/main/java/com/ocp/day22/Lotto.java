@@ -5,7 +5,13 @@ import java.util.Random;
 
 public class Lotto {
     private String value;
-    public Lotto() {
+    
+    private static Lotto lottoInstance = new Lotto();
+    public static Lotto getLotto() {
+        return lottoInstance;
+    }
+            
+    private Lotto() {
         Random r = new Random();
         int[] values = {
             r.nextInt(9) + 1,
