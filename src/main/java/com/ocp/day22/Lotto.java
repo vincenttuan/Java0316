@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Lotto {
-    
-    public String getValues() {
+    private String value;
+    public Lotto() {
         Random r = new Random();
         int[] values = {
             r.nextInt(9) + 1,
@@ -13,7 +13,9 @@ public class Lotto {
             r.nextInt(9) + 1,
             r.nextInt(9) + 1
         };
-        return Arrays.toString(values);
+        value = Arrays.toString(values);
     }
-    
+    public String getValue() {
+        return value;
+    }
 }
