@@ -17,6 +17,11 @@ public class Pen {
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return 7;
+    }
         
     @Override
     public String toString() {
