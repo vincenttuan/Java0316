@@ -14,5 +14,10 @@ public class SetDemo4 {
         scores.add(80);
         System.out.println(scores);
         // 請用 Java 8 計算國,英,數的總數
+        int sum = scores.stream()
+                    .filter(Score::isValid)
+                    .mapToInt(Integer::intValue)
+                    .sum();
+        System.out.println(sum);
     }
 }
