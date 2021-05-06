@@ -17,7 +17,15 @@ public class SetDemo1 {
         Iterator iter = subjects.iterator();
         while (iter.hasNext()) {
             Object next = iter.next();
-            System.out.println(next);
+            //System.out.println(next);
+            if(next == null) {
+                iter.remove();
+                continue;
+            }
+            if(next instanceof Integer) {
+                iter.remove();
+            }
         }
+        System.out.println(subjects);
     }
 }
