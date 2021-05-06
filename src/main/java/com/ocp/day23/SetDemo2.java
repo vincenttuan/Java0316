@@ -15,6 +15,7 @@ public class SetDemo2 {
         scores.add(3.14);
         scores.add(true);
         System.out.println(scores);
+        // 過濾資料
         Iterator iter = scores.iterator();
         while (iter.hasNext()) {
             Object next = iter.next();
@@ -28,5 +29,6 @@ public class SetDemo2 {
             }
         }
         System.out.println(scores);
+        // 求總分
     }
 }
