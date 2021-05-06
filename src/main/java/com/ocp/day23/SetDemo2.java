@@ -30,5 +30,14 @@ public class SetDemo2 {
         }
         System.out.println(scores);
         // 求總分
+        int sum = 0;
+        iter = scores.iterator(); // 重新取得走訪器
+        while (iter.hasNext()) {
+            Object next = iter.next();
+            if(next instanceof Integer) {
+                sum += (Integer)next;
+            }
+        }
+        System.out.println(sum);
     }
 }
