@@ -7,11 +7,13 @@ public class ServiceCenter {
     // 檢視 Catalog
     public void printCatalog() {
         System.out.println("訂單系統");
-        System.out.println("--------------------------------------------");
+        System.out.println("+--------------------+");
+        System.out.println("|No|　品名　|尺寸|Price|");
+        System.out.println("+--------------------+");
         for(Food food : catalog) {
-            System.out.printf("編號: %2d 品名: %s 尺寸: %c 價格: %3d\n",
+            System.out.printf("|%2d|%s|　%c|%5d|\n",
                     food.getNo(), food.getName(), food.getSize(), food.getPrice());
         }
-        System.out.println("--------------------------------------------");
+        System.out.println("+--------------------+");
     }
 }
