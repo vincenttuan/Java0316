@@ -10,9 +10,10 @@ public class Main {
     private static ServiceCenter sc = new ServiceCenter();
     private static boolean play = true;
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         while (play) {            
             menu();
+            Runtime.getRuntime().exec("cls");
         }
     }
     
