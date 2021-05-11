@@ -7,6 +7,8 @@ public class DataCenter {
     public Set<Food> getCatalog() {
         Set<Food> catalog = new LinkedHashSet<>();
         catalog.add(new Food("牛肉拉麵", '大', 130));
+        catalog.add(new Food("牛肉拉麵", '大', 130));
+        catalog.add(new Food("牛肉拉麵", '大', 130));
         catalog.add(new Food("牛肉拉麵", '小', 110));
         catalog.add(new Food("羊肉拉麵", '大', 110));
         catalog.add(new Food("羊肉拉麵", '小', 90));
