@@ -4,6 +4,13 @@ import java.util.Set;
 
 public class ServiceCenter {
     private Set<Food> catalog = new DataCenter().getCatalog();
+    // 根據 no 來查找 Food
+    public Food getFoddByNo(int no) {
+        return catalog.stream()
+                .filter(food -> food.getNo() == no)
+                .findFirst()
+                .get();
+    }
     // 檢視 Catalog
     public void printCatalog() {
         System.out.println("訂單系統");
