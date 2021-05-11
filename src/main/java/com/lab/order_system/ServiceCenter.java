@@ -9,7 +9,7 @@ public class ServiceCenter {
         System.out.println("訂單系統");
         System.out.println("--------------------------------------------");
         for(Food food : catalog) {
-            System.out.printf("編號: %d 品名: %s 尺寸: %c 價格: %d\n",
+            System.out.printf("編號: %2d 品名: %s 尺寸: %c 價格: %3d\n",
                     food.getNo(), food.getName(), food.getSize(), food.getPrice());
         }
         System.out.println("--------------------------------------------");
