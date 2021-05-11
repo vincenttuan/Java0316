@@ -38,7 +38,7 @@ public class Main {
                 }
                 break;
             case 4: // 取消訂單餐點
-                System.out.print("請輸入取消No: ");
+                System.out.print("請輸入取消id: ");
                 int cancelId = scanner.nextInt();
                 order.remove(cancelId); // 移除單筆元素
                 break;
@@ -48,7 +48,7 @@ public class Main {
             case 6: // 結帳
                 int sum = order.stream().mapToInt(Food::getPrice).sum();
                 System.out.printf("結帳: %d\n", sum);
-                order = new ArrayList<>();
+                play = false;
                 break;
             case 0: // 離開
                 play = false;
