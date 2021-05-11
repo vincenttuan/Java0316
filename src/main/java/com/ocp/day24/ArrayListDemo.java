@@ -19,6 +19,11 @@ public class ArrayListDemo {
             String next = iter.next();
             System.out.printf("%d : %s\n", nextId, next);
         }
+        while (iter.hasPrevious()) {
+            int prevId = iter.previousIndex();
+            String prev = iter.previous();
+            System.out.printf("%d : %s\n", prevId, prev);
+        }
         
     }
 }
