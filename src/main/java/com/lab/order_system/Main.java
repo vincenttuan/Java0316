@@ -8,9 +8,12 @@ public class Main {
     private static List<Food> order = new ArrayList<>();
     private static DataCenter dc = new DataCenter();
     private static ServiceCenter sc = new ServiceCenter();
+    private static boolean play = true;
     
     public static void main(String[] args) {
-        menu();
+        while (play) {            
+            menu();
+        }
     }
     
     public static void menu() {
@@ -41,7 +44,7 @@ public class Main {
             case 6: // 結帳
                 break;
             case 0: // 離開
-                return;
+                play = false;
         }
     }
 }
