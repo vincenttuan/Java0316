@@ -33,15 +33,22 @@ public class Main {
                 order.add(food);
                 break;
             case 3: // 查詢訂單餐點
-                for(Food f : order) {
-                    System.out.println(f);
+                for(int i=0;i<order.size();i++) {
+                    System.out.printf("id: %d %s\n", i, order.get(i));
                 }
                 break;
             case 4: // 取消訂單餐點
+                System.out.print("請輸入取消No: ");
+                int cancelId = scanner.nextInt();
+                order.remove(cancelId); // 移除單筆元素
                 break;
             case 5: // 刪除全部訂單
+                order = new ArrayList<>();
                 break;
             case 6: // 結帳
+                int sum = order.stream().mapToInt(Food::getPrice).sum();
+                System.out.printf("結帳: %d\n", sum);
+                order = new ArrayList<>();
                 break;
             case 0: // 離開
                 play = false;
