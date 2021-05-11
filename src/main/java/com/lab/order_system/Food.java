@@ -3,11 +3,13 @@ package com.lab.order_system;
 import java.util.Objects;
 
 public class Food {
+    private int no; // 餐點編號
     private String name;
     private char size;
     private int price;
 
-    public Food(String name, char size, int price) {
+    public Food(int no, String name, char size, int price) {
+        this.no = no;
         this.name = name;
         this.size = size;
         this.price = price;
@@ -16,9 +18,10 @@ public class Food {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + this.size;
-        hash = 79 * hash + this.price;
+        hash = 29 * hash + this.no;
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + this.size;
+        hash = 29 * hash + this.price;
         return hash;
     }
 
@@ -34,6 +37,9 @@ public class Food {
             return false;
         }
         final Food other = (Food) obj;
+        if (this.no != other.no) {
+            return false;
+        }
         if (this.size != other.size) {
             return false;
         }
@@ -45,8 +51,14 @@ public class Food {
         }
         return true;
     }
-    
-    
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
 
     public String getName() {
         return name;
@@ -74,7 +86,10 @@ public class Food {
 
     @Override
     public String toString() {
-        return "Food{" + "name=" + name + ", size=" + size + ", price=" + price + '}';
+        return "Food{" + "no=" + no + ", name=" + name + ", size=" + size + ", price=" + price + '}';
     }
+    
+    
+    
     
 }
