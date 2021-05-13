@@ -17,7 +17,7 @@ public class Util {
         String json = new Scanner(new InputStreamReader(url.openStream(), "UTF-8"))
                 .useDelimiter("\\A")
                 .next();
-        return json;
+        return json.substring(1);
     }
     
 }
