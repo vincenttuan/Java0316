@@ -17,4 +17,11 @@ public class Test_Util {
         CDC[] cdcs = Util.getCdcs();
         System.out.println(cdcs.length);
     }
+    
+    @Test
+    public void test_distance() {
+        String circle = "22.39,114.12";
+        String tw     = "24.0,121.0";
+        
+    }
 }

@@ -41,8 +41,14 @@ public class Util {
      * @param lat2 第二点纬度
      * @return 返回距离 单位：米
      */
-    public static double distance(double long1, double lat1, 
-            double long2, double lat2) {
+    public static double distance(String p1, String p2) {
+        // p1 = "22.39,114.12"
+        // p1.split(",")[0] 會得到 "22.39" 的字串
+        // p1.split(",")[1] 會得到 "114.12" 的字串
+        double lat1 = Double.parseDouble(p1.split(",")[0]);
+        double long1 = Double.parseDouble(p1.split(",")[1]);
+        double lat2 = Double.parseDouble(p2.split(",")[0]);
+        double long2 = Double.parseDouble(p2.split(",")[1]);
         double a, b, R;
         R = 6378137; // 地球半径
         lat1 = lat1 * Math.PI / 180.0;
