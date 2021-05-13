@@ -1,5 +1,6 @@
 package com.lab.rice;
 
+import com.google.gson.Gson;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Scanner;
@@ -12,5 +13,11 @@ public class Util {
                 .useDelimiter("\\A")
                 .next();
         return json;
+    }
+
+    public static Rice[] getRices() throws Exception {
+        String json = getJson();
+        Rice[] rices = new Gson().fromJson(json, Rice[].class);
+        return rices;
     }
 }
