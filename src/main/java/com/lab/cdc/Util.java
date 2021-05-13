@@ -2,6 +2,7 @@ package com.lab.cdc;
 
 // 工具程式
 
+import com.google.gson.Gson;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Scanner;
@@ -25,6 +26,12 @@ public class Util {
 //        }
         
         return (json.charAt(0) == '?')?json.substring(1):json;
+    }
+    
+    public static CDC[] getCdcs() throws Exception{
+        String json = getJson();
+        CDC[] cdcs = new Gson().fromJson(json, CDC[].class);
+        return cdcs;
     }
     
 }
