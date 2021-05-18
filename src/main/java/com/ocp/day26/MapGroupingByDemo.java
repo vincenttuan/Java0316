@@ -4,6 +4,7 @@ package com.ocp.day26;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -28,8 +29,11 @@ public class MapGroupingByDemo {
             names.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
         );
-
+        // {papaya=1, orange=1, banana=2, apple=3} = Map<String, Long>   
         
+        Map<String, Long> result = names.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(result);
         
     }
 }
