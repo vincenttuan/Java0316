@@ -18,9 +18,13 @@ public class ProductQueueDemo {
         products.offer(p3);
         System.out.println("購物車: " + products);
         // 結帳
-        
+        int amount = 0;
         // 應付帳款
-        
+        while (!products.isEmpty()) {            
+            amount += products.poll().getPrice();
+        }
+        System.out.println("應付帳款: " + amount);
         // 查看購物車
+        System.out.println("購物車: " + products);
     }
 }
