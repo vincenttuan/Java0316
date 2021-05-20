@@ -1,7 +1,10 @@
 package com.ocp.day27;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import static java.util.stream.Collectors.toSet;
 
@@ -41,6 +44,9 @@ public class GroupingExam {
         
         // 如何把 {不及格=[Bob, Mary], 及格=[Tom, John, Helen]} 放入到 finalMap 中
         // 並印出 finalMap
-        
+        Map<String, Set<String>> finalMap = exams.stream()
+                .collect(Collectors.groupingBy(e -> e.getScore() >= 60 ? "及格" : "不及格", 
+                                               Collectors.mapping(Exam::getName, toSet())));
+        System.out.println(finalMap);
     }
 }
