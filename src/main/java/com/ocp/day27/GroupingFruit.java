@@ -27,5 +27,8 @@ public class GroupingFruit {
         Map<String, Long> result = fruits.stream()
                 .collect(Collectors.groupingBy(f->f.getName(), Collectors.counting()));
         System.out.println(result);
+        
+        // 排序: {蘋果=3, 香蕉=2, 柳丁=1, 木瓜=1, 西瓜=1}
+        
     }
 }
