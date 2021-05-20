@@ -19,16 +19,17 @@ public class GroupingFruit {
         );
         System.out.println(fruits);
         // 分組:
-        // 蘋果=3, 香蕉=2, 柳丁=1, 西瓜=1, 木瓜=1
-        System.out.println(
-            fruits.stream()
-                .collect(Collectors.groupingBy(f->f.getName(), Collectors.counting()))
-        );
+        // {蘋果=3, 柳丁=1, 香蕉=2, 木瓜=1, 西瓜=1}
         Map<String, Long> result = fruits.stream()
                 .collect(Collectors.groupingBy(f->f.getName(), Collectors.counting()));
         System.out.println(result);
         
-        // 排序: {蘋果=3, 香蕉=2, 柳丁=1, 木瓜=1, 西瓜=1}
+        // 分組 + sum qty
+        // {蘋果=40, 柳丁=10, 香蕉=30, 木瓜=20, 西瓜=10}
+        Map<String, Integer> result2 = fruits.stream()
+                .collect(Collectors.groupingBy(Fruit::getName, 
+                                               Collectors.summingInt(Fruit::getQty)));
+        System.out.println(result2);
         
     }
 }
