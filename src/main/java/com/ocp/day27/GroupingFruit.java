@@ -3,6 +3,7 @@ package com.ocp.day27;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class GroupingFruit {
@@ -31,16 +32,28 @@ public class GroupingFruit {
                                                Collectors.summingInt(Fruit::getQty)));
         System.out.println(result2);
         
-        // 分組 by price
+        // 分組 by price part I
         System.out.println(
              fruits.stream()
                 .collect(Collectors.groupingBy(Fruit::getPrice))
         );
         
+        Map<Double, List<Fruit>> result3 = fruits.stream()
+                .collect(Collectors.groupingBy(Fruit::getPrice));
+        System.out.println(result3);
+        
+        // 分組 by price part II
         System.out.println(
              fruits.stream()
                 .collect(Collectors.groupingBy(Fruit::getPrice, 
                                                Collectors.mapping(Fruit::getName, Collectors.toSet())))
         );
+        
+        Map<Double, Set<String>> result4 = fruits.stream()
+                .collect(Collectors.groupingBy(Fruit::getPrice, 
+                                               Collectors.mapping(Fruit::getName, Collectors.toSet())));
+        System.out.println(result4);
+        
+        
     }
 }
