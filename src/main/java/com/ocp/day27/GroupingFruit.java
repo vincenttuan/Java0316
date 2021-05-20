@@ -32,6 +32,15 @@ public class GroupingFruit {
         System.out.println(result2);
         
         // 分組 by price
+        System.out.println(
+             fruits.stream()
+                .collect(Collectors.groupingBy(Fruit::getPrice))
+        );
         
+        System.out.println(
+             fruits.stream()
+                .collect(Collectors.groupingBy(Fruit::getPrice, 
+                                               Collectors.mapping(Fruit::getName, Collectors.toSet())))
+        );
     }
 }
