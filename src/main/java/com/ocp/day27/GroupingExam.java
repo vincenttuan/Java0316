@@ -2,6 +2,7 @@ package com.ocp.day27;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GroupingExam {
     public static void main(String[] args) {
@@ -14,6 +15,9 @@ public class GroupingExam {
         );
         // 請問及格/不及格的人數分組
         // {true = 3, false = 2}
+        
+        
+        // {true = [John, Helen, Tom], false = [Mary, Bob]}
         
     }
 }
