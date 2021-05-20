@@ -21,6 +21,9 @@ public class CollectionsDemo {
         Collections.sort(nums, comparator);
         System.out.println(nums);
         
+        Collections.sort(nums); // 自然排序(小->大)
+        Collections.reverse(nums);
+        System.out.println(nums);
     }
     
 }
