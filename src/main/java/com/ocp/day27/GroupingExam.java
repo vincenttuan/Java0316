@@ -38,5 +38,9 @@ public class GroupingExam {
                 .collect(Collectors.groupingBy(e -> e.getScore() >= 60 ? "及格" : "不及格", 
                                                Collectors.mapping(Exam::getName, toSet())))
         );
+        
+        // 如何把 {不及格=[Bob, Mary], 及格=[Tom, John, Helen]} 放入到 finalMap 中
+        // 並印出 finalMap
+        
     }
 }
