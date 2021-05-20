@@ -18,18 +18,20 @@ public class GroupingFruit {
                 new Fruit("蘋果", 20, 9.99)
         );
         System.out.println(fruits);
-        // 分組:
+        // 分組 by name:
         // {蘋果=3, 柳丁=1, 香蕉=2, 木瓜=1, 西瓜=1}
         Map<String, Long> result = fruits.stream()
                 .collect(Collectors.groupingBy(f->f.getName(), Collectors.counting()));
         System.out.println(result);
         
-        // 分組 + sum qty
+        // 分組 by name + sum qty
         // {蘋果=40, 柳丁=10, 香蕉=30, 木瓜=20, 西瓜=10}
         Map<String, Integer> result2 = fruits.stream()
                 .collect(Collectors.groupingBy(Fruit::getName, 
                                                Collectors.summingInt(Fruit::getQty)));
         System.out.println(result2);
+        
+        // 分組 by price
         
     }
 }
