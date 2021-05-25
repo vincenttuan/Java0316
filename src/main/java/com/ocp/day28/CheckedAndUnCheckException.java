@@ -22,7 +22,7 @@ public class CheckedAndUnCheckException {
         int[] nums = {};
         if(nums != null) { // 避免 NullPointerException 的發生
             if(nums.length > 0) { // 避免 ArrayIndexOutOfBoundsException 的發生
-             System.out.println(nums[0]);
+                System.out.println(nums[0]);
             }
         }
         
