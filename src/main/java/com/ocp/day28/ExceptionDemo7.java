@@ -3,8 +3,6 @@ package com.ocp.day28;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ExceptionDemo7 {
     public static void main(String[] args) {
