@@ -14,7 +14,12 @@ public class CallStackDemo {
     }
     
     public static void c() {
-        System.out.println(10/0);
+        try {
+            System.out.println(10/0);
+        } catch (Exception e) {
+            System.out.println(e);
+            //e.printStackTrace(System.out);
+        }
         System.out.println("程式繼續執行");
     }
 }
