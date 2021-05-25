@@ -42,11 +42,11 @@ public class LoginService {
     public boolean login(String name, String password) throws LoginFailException {
         boolean check1 = users.stream()
                 .filter(user -> user.getName().equals(name))
-                .findAny()
-                .isPresent();
-        if(!check1) {
+                .findAny() // 找到一筆
+                .isPresent(); // 是否有找到
+        if(!check1) { // 若沒找到
             LoginFailException e = new LoginFailException("使用者名稱錯誤");
-            throw e;
+            throw e; // 拋出 LoginFailException 例外物件
         }
         //-----------------------------------------------------------------------
         boolean check2 = users.stream()
