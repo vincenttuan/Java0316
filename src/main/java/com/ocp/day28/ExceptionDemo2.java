@@ -11,6 +11,5 @@ public class ExceptionDemo2 {
             System.out.println("錯誤訊息: " + e.getMessage());
             System.out.println("請重新輸入");
         }
-        
     }
 }
