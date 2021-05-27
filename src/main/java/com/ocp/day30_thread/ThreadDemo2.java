@@ -17,7 +17,12 @@ public class ThreadDemo2 {
         Thread rabbit = new Thread(new Race(), "兔子");
         Thread turtle = new Thread(new Race());
         turtle.setName("烏龜");
-        rabbit.start();
+        rabbit.setPriority(Thread.MIN_PRIORITY); // 1
+        turtle.setPriority(Thread.MAX_PRIORITY); // 10
+        System.out.println(rabbit.getPriority());
+        System.out.println(turtle.getPriority());
         turtle.start();
+        rabbit.start();
+        
     }
 }
