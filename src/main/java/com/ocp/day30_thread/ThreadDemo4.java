@@ -10,9 +10,9 @@ public class ThreadDemo4 {
             }
             System.out.printf("%s 工作完成\n", name);
         };
-        Thread t1 = new Thread(r);
-        Thread t2 = new Thread(r);
-        
+        Thread t1 = new Thread(r, "T1");
+        Thread t2 = new Thread(r, "T2");
+        t1.setDaemon(true); // t1 設定為背景執行緒
         t1.start();
         t2.start();
         
