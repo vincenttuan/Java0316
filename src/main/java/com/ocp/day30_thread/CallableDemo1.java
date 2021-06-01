@@ -1,13 +1,18 @@
 package com.ocp.day30_thread;
 
+import java.math.BigDecimal;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
+import yahoofinance.Stock;
+import yahoofinance.YahooFinance;
 
 // 匯率
 class Exchange implements Callable<Double> {
     @Override
     public Double call() throws Exception {
-        return 27.81;
+        Stock stock = YahooFinance.get("USDTWD=x");
+        BigDecimal price = stock.getQuote().getPrice();
+        return price.doubleValue();
     }
 }
 
