@@ -24,5 +24,10 @@ public class ThreadDemo3 {
         RunningRunnable rr =  new RunningRunnable();
         Thread t = new Thread(rr);
         t.start();
+        
+        // Java 8
+        Runnable r = () -> System.out.println("Java 8 Runnable...");
+        Thread t2 = new Thread(r);
+        t2.start();
     }
 }
