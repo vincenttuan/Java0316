@@ -13,6 +13,7 @@ public class ThreadDemo4 {
         Thread t1 = new Thread(r, "T1");
         Thread t2 = new Thread(r, "T2");
         t1.setDaemon(true); // t1 設定為背景執行緒
+        //t2.setDaemon(true); // t2 設定為背景執行緒
         t1.start();
         t2.start();
         
