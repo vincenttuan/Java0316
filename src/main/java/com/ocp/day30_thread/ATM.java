@@ -10,7 +10,7 @@ class Account { // 銀行帳戶
     }
     
     public void withdraw(int cash) throws Exception { // 提款方法
-        String name = Thread.currentThread().getName();
+        String name = Thread.currentThread().getName(); // 提款人
         System.out.printf("%s 準備提款...\n", name);
         // 取得目前的帳戶餘額
         int currentBalance = balance;
@@ -26,6 +26,24 @@ class Account { // 銀行帳戶
         } else {
             System.out.printf("%s 提款: $%,d 失敗(餘額不足) 帳戶餘額: $%,d\n",
                               name, cash, balance);
+        }
+    }
+}
+
+class WithDraw implements Runnable { // 提款執行緒
+    private Account account; // 帳號
+    private int cash; // 提款金額
+
+    public WithDraw(Account account, int cash) {
+        this.account = account;
+        this.cash = cash;
+    }
+    
+    @Override
+    public void run() {
+        try {
+            account.withdraw(cash); // 進行提款的作業
+        } catch (Exception e) {
         }
     }
 
