@@ -1,7 +1,6 @@
 package com.ocp.day30_thread;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 // 匯率
