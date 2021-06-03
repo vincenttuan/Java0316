@@ -2,12 +2,16 @@ package com.ocp.day31_thread;
 
 class Ball {
     private int max = 100;
-    public synchronized void get() {
-        if(max > 0) {
-            String name = Thread.currentThread().getName();
-            System.out.printf("%s 取到第 %d 顆球\n", name, max);
-            max--;
+    public void get() {
+        // ... code
+        synchronized(this) {
+            if(max > 0) {
+                String name = Thread.currentThread().getName();
+                System.out.printf("%s 取到第 %d 顆球\n", name, max);
+                max--;
+            }
         }
+        // ... code
     }
 }
 
