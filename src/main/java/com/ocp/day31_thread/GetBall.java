@@ -1,7 +1,7 @@
 package com.ocp.day31_thread;
 
 class Ball {
-    private int max = 100;
+    private int max = 500;
     public void get() {
         // ... code
         synchronized(this) {
@@ -24,7 +24,7 @@ class BallThread extends Thread {
 
     @Override
     public void run() {
-        for(int i=1;i<=100;i++) {
+        for(int i=1;i<=500;i++) {
             ball.get();
         }
     }
@@ -33,6 +33,7 @@ class BallThread extends Thread {
 public class GetBall {
     public static void main(String[] args) {
         Ball ball = new Ball();
+        new BallThread(ball).start();
         new BallThread(ball).start();
         new BallThread(ball).start();
     }
