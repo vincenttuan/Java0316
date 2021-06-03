@@ -9,7 +9,7 @@ class Lotto implements Runnable {
     @Override
     public void run() {
         try {
-            Thread.sleep(new Random().nextInt(100));
+            Thread.sleep(new Random().nextInt(10000));
             int num = new Random().nextInt(100);
             System.out.println(num);
         } catch (Exception e) {
@@ -22,6 +22,7 @@ public class ThreadPoolExecutorDemo {
     public static void main(String[] args) {
         System.out.println("請給我10組 Lotto 數字");
         ExecutorService service = Executors.newCachedThreadPool();
+        //ExecutorService service = Executors.newFixedThreadPool(10);
         for (int i = 1; i <= 100; i++) {
             service.submit(new Lotto());
         }
