@@ -2,6 +2,7 @@ package com.ocp.day32_cyclicbarrier;
 
 import java.util.Random;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
 
 public class Car extends Thread {
     private CyclicBarrier cb;
@@ -16,7 +17,8 @@ public class Car extends Thread {
         try {
             Thread.sleep(new Random().nextInt(5000));
             System.out.printf("%s 到台中了\n", name);
-            cb.await();
+            //cb.await();
+            cb.await(5, TimeUnit.SECONDS);
         } catch (Exception e) {
         }
         

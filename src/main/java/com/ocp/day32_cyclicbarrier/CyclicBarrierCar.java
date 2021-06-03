@@ -11,7 +11,7 @@ public class CyclicBarrierCar {
         new Car(cb).start();
         new Car(cb).start();
         new Car(cb).start();
-        
+        new Car(cb).start();
     }
     
     
