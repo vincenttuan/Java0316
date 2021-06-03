@@ -5,14 +5,13 @@ import java.util.concurrent.CyclicBarrier;
 
 public class Car extends Thread {
     private CyclicBarrier cb;
-    private String name;
     public Car(CyclicBarrier cb) {
         this.cb = cb;
-        this.name = Thread.currentThread().getName();
     }
 
     @Override
     public void run() {
+        String name = Thread.currentThread().getName();
         System.out.printf("%s 從台北出發\n", name);
         try {
             Thread.sleep(new Random().nextInt(5000));
