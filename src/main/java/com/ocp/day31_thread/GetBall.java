@@ -12,7 +12,7 @@ class Ball {
                 String name = Thread.currentThread().getName();
                 System.out.printf("%s 取到第 %d 顆球\n", name, max);
                 max--;
-                GetBall.map.put(name, GetBall.map.get(name)+1);
+                GetBall.map.put(name, GetBall.map.getOrDefault(name, 0)+1);
             }
         }
         // ... code
@@ -37,15 +37,12 @@ class BallThread extends Thread {
 }
 public class GetBall {
     static Map<String, Integer> map = new LinkedHashMap<>();
-    static {
-        map.put("Thread-0", 0);
-        map.put("Thread-1", 0);
-        map.put("Thread-2", 0);
-    }
     public static void main(String[] args) {
         Ball ball = new Ball();
-        new BallThread(ball).start();
-        new BallThread(ball).start();
-        new BallThread(ball).start();
+        for (int i = 1; i <= 5; i++) {
+            new BallThread(ball).start();
+        }
+        
+        
     }
 }
