@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class SchedulerLottoFixedRateDemo {
     public static void main(String[] args) {
         Runnable r = () -> {
-            int delay = new Random().nextInt(3000); // 每次開獎所花費的時間
+            int delay = new Random().nextInt(7000); // 每次開獎所花費的時間
             try {
                 Thread.sleep(delay);
             } catch (Exception e) {
