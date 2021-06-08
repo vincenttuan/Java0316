@@ -20,7 +20,7 @@ public class PlayLotto2 {
         list.add(new LottoMachine(5));
         System.out.println("開始搖獎");
         Lotto lotto = service.invokeAny(list);
-        System.out.println("唱明獎號");
+        System.out.println("唱名獎號");
         System.out.println(lotto);
         service.shutdown();
         System.out.println("開獎結束");

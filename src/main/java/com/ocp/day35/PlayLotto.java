@@ -20,7 +20,7 @@ public class PlayLotto {
         list.add(new LottoMachine(5));
         System.out.println("開始搖獎");
         List<Future<Lotto>> results = service.invokeAll(list);
-        System.out.println("唱明獎號");
+        System.out.println("唱名獎號");
         results.forEach(f -> {
             try {
                 System.out.println(f.get());
