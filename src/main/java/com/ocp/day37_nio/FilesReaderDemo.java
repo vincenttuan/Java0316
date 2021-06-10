@@ -15,10 +15,12 @@ public class FilesReaderDemo {
         } catch (Exception e) {
         }
         System.out.println("------------------------");
+        
         // 2. Files.readAllLines (得到 List 集合)
         List<String> list = Files.readAllLines(path);
         list.forEach(System.out::println);
         System.out.println("------------------------");
+        
         // 3. Files.lines (得到 Stream 串流)
         Files.lines(path).forEach(System.out::println);
     }
