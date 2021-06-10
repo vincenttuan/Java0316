@@ -11,6 +11,7 @@ public class ReadNews {
     public static void main(String[] args) {
         String newspath = "src/main/java/com/ocp/day36_io/files/news.txt";
         try(FileInputStream   fis = new FileInputStream(newspath);
+            // byte[] 轉 char[] 可以支援指定編碼
             InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
             BufferedReader     br = new BufferedReader(isr);) {
             
