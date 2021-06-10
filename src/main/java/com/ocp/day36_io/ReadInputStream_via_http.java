@@ -10,7 +10,7 @@ public class ReadInputStream_via_http {
         URL url = new URL(path);
         InputStream is = url.openConnection().getInputStream();
         int ch = 0;
-        while ((ch = is.read()) != -1) {
+        while ((ch = is.read()) != -1) { // 讀取資料
             System.out.print(ch);
         }
     }
