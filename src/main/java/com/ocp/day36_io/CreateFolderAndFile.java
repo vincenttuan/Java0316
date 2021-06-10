@@ -14,8 +14,12 @@ public class CreateFolderAndFile {
         if(folder.exists()) {
             File f = new File("src/main/java/com/ocp/day36_io/files/salary.txt");
             if(!f.exists()) {
-                f.createNewFile();
+                f.createNewFile(); // 建立檔案
             }
         }
+        
+        File f2 = new File("src/main/java/com/ocp/day36_io/files/");
+        System.out.println(f2.isDirectory());
+        System.out.println(f2.isFile());
     }
 }
