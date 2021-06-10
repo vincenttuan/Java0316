@@ -10,14 +10,12 @@ import java.util.stream.Stream;
 public class WalkingHome {
     public static void main(String[] args) throws IOException  {
         Path homePath = Paths.get(System.getProperty("user.home"));
-        Stream<Path> files = Files.walk(homePath);
+        Stream<Path> files = Files.walk(homePath); // 深度走訪
         files.forEach(p -> {
             Path path = p.toAbsolutePath();
             System.out.print(p + " : ");
             try {
-                System.out.println(Files
-                        .readAttributes(path, BasicFileAttributes.class)
-                        .creationTime());
+                System.out.println(Files.readAttributes(path, BasicFileAttributes.class).creationTime());
             } catch (IOException ex) {
             }
         });
